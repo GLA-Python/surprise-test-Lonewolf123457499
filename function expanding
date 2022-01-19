@@ -1,0 +1,14 @@
+def function_t(u):
+    c=0
+    for i in range(0,len(u)-2) :
+        l1=abs(u[i+1]-u[i])
+        l2=abs(u[i+2]-u[i+1])
+        if l1 < l2:
+            c=c+1
+    if c==len(u)//2+1:
+        return True
+    else :
+        return False
+l=list(map(int,input().split()))
+p=function_t(l)
+print(p)
